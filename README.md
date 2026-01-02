@@ -1,13 +1,3 @@
-# Nerc's Vue Template
+# Time
 
-This is a template for Vue.js projects I created for my personal use. It's built
-with the following features:
-
-- Vue 3, Vite, PNPM and TypeScript
-- File Based Routing with Unplugin Vue Router
-- Pinia for state management
-- Tailwind CSS for styling
-- Eslint for code quality
-- Iconify for icons
-- Unplugin Auto Import for automatic importing of components, composables and
-  others
+A bunch of different ideas for displaying the time in a more interesting way. This project is mainly for learning and experimenting with different techniques in web development.
