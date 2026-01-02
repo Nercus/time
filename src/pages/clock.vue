@@ -55,6 +55,7 @@
 definePage({
   meta: {
     order: 4,
+    title: 'Clock of clocks',
   },
 })
 

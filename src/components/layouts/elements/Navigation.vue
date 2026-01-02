@@ -4,6 +4,9 @@
       <button class="size-8 md:size-10 lg:size-18 cursor-pointer" @click="goBack">
         <slot name="back" />
       </button>
+      <h1 class="font-mono text-gray-900 text-sm text-center uppercase tracking-wide">
+        {{ pageTitle }}
+      </h1>
       <button class="size-8 md:size-10 lg:size-18 cursor-pointer" @click="goNext">
         <slot name="next" />
       </button>
@@ -17,6 +20,10 @@ import { useDrag } from '@vueuse/gesture'
 const router = useRouter()
 const route = useRoute()
 const swipeTarget = useTemplateRef<HTMLDivElement>('swipeTarget')
+
+const pageTitle = computed(() => {
+  return route.meta.title as string
+})
 
 const currentOrder = computed(() => {
   return (route.meta.order as number) ?? 0

@@ -56,12 +56,13 @@
 definePage({
   meta: {
     order: 0,
+    title: 'Handdrawn Clock',
   },
 })
 
 useSeoMeta({
-  title: 'Hand-Drawn Clock',
-  description: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
+  title: 'Handdrawn Clock',
+  description: 'A handdrawn style clock and date display built with Vue 3 and Tailwind CSS.',
   ogUrl: 'https://time.wintersperger.dev',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',

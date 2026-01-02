@@ -40,11 +40,12 @@
 definePage({
   meta: {
     order: 5,
+    title: 'Dots of Time',
   },
 })
 
 useSeoMeta({
-  title: 'Dots Clock',
+  title: 'Dots of Time',
   description: 'A dots only clock and date display built with Vue 3 and Tailwind CSS.',
   ogUrl: 'https://time.wintersperger.dev/dots',
   ogSiteName: 'Nerc\'s clock',

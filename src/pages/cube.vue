@@ -55,6 +55,7 @@
 definePage({
   meta: {
     order: 3,
+    title: 'Clock of Cubes',
   },
 })
 

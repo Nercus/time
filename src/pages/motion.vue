@@ -62,6 +62,7 @@ import { motion } from 'motion-v'
 definePage({
   meta: {
     order: 2,
+    title: 'Motion Clock',
   },
 })
 

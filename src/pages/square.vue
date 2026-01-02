@@ -54,6 +54,7 @@
 definePage({
   meta: {
     order: 1,
+    title: 'Clock of Squares',
   },
 })
 
