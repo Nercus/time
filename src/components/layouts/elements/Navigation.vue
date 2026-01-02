@@ -10,6 +10,8 @@
 </template>
 
 <script setup lang="ts">
+import { useDrag } from '@vueuse/gesture'
+
 const router = useRouter()
 const route = useRoute()
 
@@ -41,4 +43,13 @@ function goNext() {
   if (!nextRoute) return
   router.push(nextRoute.path)
 }
+
+useDrag(({ swipe }) => {
+  if (swipe[0] === -1) {
+    goNext()
+  }
+  else if (swipe[0] === 1) {
+    goBack()
+  }
+})
 </script>
