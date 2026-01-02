@@ -60,7 +60,7 @@ useDrag(({ swipe }) => {
   preventWindowScrollY: true,
   swipeDistance: [50, 50],
   axis: 'x',
-  swipeDuration: 500,
-  swipeVelocity: 0.3,
+  swipeDuration: 5000,
+  swipeVelocity: 0,
 })
 </script>
