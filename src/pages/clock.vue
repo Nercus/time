@@ -58,6 +58,12 @@ definePage({
   },
 })
 
+useHead({
+  meta: [
+    { name: 'theme-color', content: 'white' },
+  ],
+})
+
 useSeoMeta({
   title: 'Clock of clocks',
   description: 'A clock made with multiple clocks built with Vue 3 and Tailwind CSS.',

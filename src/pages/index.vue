@@ -59,6 +59,12 @@ definePage({
   },
 })
 
+useHead({
+  meta: [
+    { name: 'theme-color', content: 'white' },
+  ],
+})
+
 useSeoMeta({
   title: 'Hand-Drawn Clock',
   description: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
