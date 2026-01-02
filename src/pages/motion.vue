@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/component-name-in-template-casing -->
 <template>
   <div class="relative flex flex-1 justify-center items-center bg-white size-full overflow-hidden will-change-transform">
-    <div class="flex-1 size-full noise-bg">
-      <Time class="fixed inset-0 size-screen">
+    <div class="flex-1 size-full">
+      <Time class="fixed inset-0 size-screen noise-bg">
         <template #day>
           <MotionSymbol :symbol="time.day.value?.[0]" />
           <MotionSymbol :symbol="time.day.value?.[1]" />
@@ -40,23 +40,15 @@
         </template>
       </Time>
 
-      <Navigation class="bottom-4 fixed inset-x-0">
+      <Navigation>
         <template #back>
-          <motion.div :hover="{ y: -3 }" :intial="{ y: 0 }" :transition="{ type: 'spring', duration: 0.75, bounce: 0.5 }">
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" class="size-8 text-rose-800">
-              <path
-                fill="currentColor"
-                d="m1.38 7.18l4.83-4.15c.7-.6 1.79-.1 1.79.82v8.29c0 .93-1.09 1.42-1.79.82L1.38 8.82c-.5-.43-.5-1.21 0-1.64" />
-            </svg>
+          <motion.div :hover="{ scale: 1.23 }" :transition="{ type: 'spring', duration: 0.75, bounce: 0.5 }">
+            <Icon class="size-6 md:size-8 lg:size-14 text-rose-800 fluent--caret-left-20-filled" />
           </motion.div>
         </template>
         <template #next>
-          <motion.div :hover="{ y: -3 }" :intial="{ y: 0 }" :transition="{ type: 'spring', duration: 0.75, bounce: 0.5 }">
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" class="size-8 text-rose-800">
-              <path
-                fill="currentColor"
-                d="M7.62 7.18L2.79 3.03c-.7-.6-1.79-.1-1.79.82v8.29c0 .93 1.09 1.42 1.79.82l4.83-4.14c.5-.43.5-1.21 0-1.64" />
-            </svg>
+          <motion.div :hover="{ scale: 1.3 }" :transition="{ type: 'spring', duration: 0.75, bounce: 0.5 }">
+            <Icon class="size-6 md:size-8 lg:size-14 text-rose-800 fluent--caret-right-20-filled" />
           </motion.div>
         </template>
       </Navigation>
