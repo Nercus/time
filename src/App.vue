@@ -1,5 +1,4 @@
 <template>
-  {{ metaColor }}
   <RouterView v-slot="{ Component }">
     <Transition name="fade" mode="out-in">
       <component :is="Component" />
@@ -15,17 +14,6 @@ const { updateFavicon } = useDynamicFavicon()
 watch(time.currentDate, (newDate) => {
   updateFavicon(newDate)
 }, { immediate: true })
-
-const metaColor = ref('')
-function updateThemeColor() {
-  metaColor.value = document.head.querySelector('meta[name="theme-color"]')?.getAttribute('content') || 'no theme color'
-}
-
-onMounted(() => {
-  setInterval(() => {
-    updateThemeColor()
-  }, 1000)
-})
 </script>
 
 <style scoped>

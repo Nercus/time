@@ -50,7 +50,6 @@ useSeoMeta({
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  themeColor: '#000000',
 })
 
 const time = useTime()
