@@ -22,6 +22,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SquareSymbol: typeof import('./../components/symbols/SquareSymbol.vue')['default']
+    SwipeOverlay: typeof import('./../components/layouts/elements/SwipeOverlay.vue')['default']
     Time: typeof import('./../components/layouts/Time.vue')['default']
     TimeSorted: typeof import('./../components/layouts/TimeSorted.vue')['default']
   }

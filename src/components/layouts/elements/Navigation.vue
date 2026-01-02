@@ -1,12 +1,15 @@
 <template>
-  <footer class="bottom-0 absolute inset-x-0 flex flex-row justify-between items-center p-10 w-full">
-    <button class="cursor-pointer" @click="goBack">
-      <slot name="back" />
-    </button>
-    <button class="cursor-pointer" @click="goNext">
-      <slot name="next" />
-    </button>
-  </footer>
+  <div class="fixed inset-0 flex flex-col">
+    <div ref="swipeTarget" class="bg-transparent cursor-grab grow" />
+    <footer class="flex flex-row justify-between items-center p-10 w-full">
+      <button class="cursor-pointer" @click="goBack">
+        <slot name="back" />
+      </button>
+      <button class="cursor-pointer" @click="goNext">
+        <slot name="next" />
+      </button>
+    </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -14,6 +17,7 @@ import { useDrag } from '@vueuse/gesture'
 
 const router = useRouter()
 const route = useRoute()
+const swipeTarget = useTemplateRef<HTMLDivElement>('swipeTarget')
 
 const currentOrder = computed(() => {
   return (route.meta.order as number) ?? 0
@@ -51,5 +55,12 @@ useDrag(({ swipe }) => {
   else if (swipe[0] === 1) {
     goBack()
   }
+}, {
+  domTarget: swipeTarget,
+  preventWindowScrollY: true,
+  swipeDistance: [50, 50],
+  axis: 'x',
+  swipeDuration: 500,
+  swipeVelocity: 0.3,
 })
 </script>
