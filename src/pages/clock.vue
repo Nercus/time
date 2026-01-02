@@ -58,12 +58,6 @@ definePage({
   },
 })
 
-useHead({
-  meta: [
-    { name: 'theme-color', content: '#FFFFFF' },
-  ],
-})
-
 useSeoMeta({
   title: 'Clock of clocks',
   description: 'A clock made with multiple clocks built with Vue 3 and Tailwind CSS.',
@@ -71,7 +65,7 @@ useSeoMeta({
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  themeColor: 'white',
+  themeColor: '#FFFFFF',
 })
 
 const time = useTime()

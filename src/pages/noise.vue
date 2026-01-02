@@ -73,12 +73,6 @@ definePage({
   },
 })
 
-useHead({
-  meta: [
-    { name: 'theme-color', content: '#FFFFFF' },
-  ],
-})
-
 useSeoMeta({
   title: 'Noise Clock',
   description: 'A noise style clock and date display built with Vue 3 and Tailwind CSS.',
@@ -86,7 +80,7 @@ useSeoMeta({
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  themeColor: '#e7e5e4',
+  themeColor: '#FFFFFF',
 })
 
 const time = useTime()

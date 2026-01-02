@@ -43,12 +43,6 @@ definePage({
   },
 })
 
-useHead({
-  meta: [
-    { name: 'theme-color', content: '#000000' },
-  ],
-})
-
 useSeoMeta({
   title: 'Dots Clock',
   description: 'A dots only clock and date display built with Vue 3 and Tailwind CSS.',

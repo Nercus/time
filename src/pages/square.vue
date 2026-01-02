@@ -57,12 +57,6 @@ definePage({
   },
 })
 
-useHead({
-  meta: [
-    { name: 'theme-color', content: '#FFFFFF' },
-  ],
-})
-
 useSeoMeta({
   title: 'Squares Clock',
   description: 'A squares style clock and date display built with Vue 3 and Tailwind CSS.',

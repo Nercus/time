@@ -59,12 +59,6 @@ definePage({
   },
 })
 
-useHead({
-  meta: [
-    { name: 'theme-color', content: '#FFFFFF' },
-  ],
-})
-
 useSeoMeta({
   title: 'Hand-Drawn Clock',
   description: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
@@ -72,7 +66,7 @@ useSeoMeta({
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  themeColor: '#ffffff',
+  themeColor: '#FFFFFF',
 })
 
 const time = useTime()
