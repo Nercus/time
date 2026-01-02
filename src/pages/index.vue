@@ -53,8 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import ogImage from '../assets/handdrawn.png'
-
 definePage({
   meta: {
     order: 0,
@@ -64,15 +62,9 @@ definePage({
 useSeoMeta({
   title: 'Hand-Drawn Clock',
   description: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogTitle: 'Hand-Drawn Clock',
-  ogDescription: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogImage,
   ogUrl: 'https://time.wintersperger.dev',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
-  twitterTitle: 'Hand-Drawn Clock',
-  twitterDescription: 'A hand-drawn style clock and date display built with Vue 3 and Tailwind CSS.',
-  twitterImage: ogImage,
   twitterCard: 'summary_large_image',
   themeColor: '#ffffff',
 })

@@ -66,7 +66,6 @@
 
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import ogImage from '../assets/noise.png'
 
 definePage({
   meta: {
@@ -77,15 +76,9 @@ definePage({
 useSeoMeta({
   title: 'Noise Clock',
   description: 'A noise style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogTitle: 'Noise Clock',
-  ogDescription: 'A noise style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogImage,
   ogUrl: 'https://time.wintersperger.dev/noise',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
-  twitterTitle: 'Noise Clock',
-  twitterDescription: 'A noise style clock and date display built with Vue 3 and Tailwind CSS.',
-  twitterImage: ogImage,
   twitterCard: 'summary_large_image',
   themeColor: '#e7e5e4',
 })

@@ -52,8 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import ogImage from '../assets/cube.png'
-
 definePage({
   meta: {
     order: 3,
@@ -63,15 +61,9 @@ definePage({
 useSeoMeta({
   title: 'Cube Clock',
   description: 'A cube style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogTitle: 'Cube Clock',
-  ogDescription: 'A cube style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogImage,
   ogUrl: 'https://time.wintersperger.dev/cube',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
-  twitterTitle: 'Cube Clock',
-  twitterDescription: 'A cube style clock and date display built with Vue 3 and Tailwind CSS.',
-  twitterImage: ogImage,
   twitterCard: 'summary_large_image',
   themeColor: '#3f3f46',
 })

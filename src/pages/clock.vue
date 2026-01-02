@@ -52,8 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import ogImage from '../assets/clock.png'
-
 definePage({
   meta: {
     order: 4,
@@ -63,15 +61,9 @@ definePage({
 useSeoMeta({
   title: 'Clock of clocks',
   description: 'A clock made with multiple clocks built with Vue 3 and Tailwind CSS.',
-  ogTitle: 'Clock Clock',
-  ogDescription: 'A clock made with multiple clocks built with Vue 3 and Tailwind CSS.',
-  ogImage,
   ogUrl: 'https://time.wintersperger.dev/clock',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
-  twitterTitle: 'Clock Clock',
-  twitterDescription: 'A clock made with multiple clocks built with Vue 3 and Tailwind CSS.',
-  twitterImage: ogImage,
   twitterCard: 'summary_large_image',
   themeColor: 'white',
 })

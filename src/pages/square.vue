@@ -51,8 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import ogImage from '../assets/dots.png'
-
 definePage({
   meta: {
     order: 1,
@@ -61,15 +59,9 @@ definePage({
 useSeoMeta({
   title: 'Squares Clock',
   description: 'A squares style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogTitle: 'Squares Clock',
-  ogDescription: 'A squares style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogImage,
   ogUrl: 'https://time.wintersperger.dev/square',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
-  twitterTitle: 'Squares Clock',
-  twitterDescription: 'A squares style clock and date display built with Vue 3 and Tailwind CSS.',
-  twitterImage: ogImage,
   twitterCard: 'summary_large_image',
   themeColor: '#000000',
 })
