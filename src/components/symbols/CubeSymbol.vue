@@ -89,7 +89,7 @@ watch(() => props.symbol, (newSymbol, oldSymbol) => {
     // Get adjacent sides for current face and pick one randomly
     const adjacent = adjacentSides[showSide.value]
     const randomIndex = Math.floor(Math.random() * adjacent.length)
-    showSide.value = adjacent[randomIndex]
+    showSide.value = adjacent[randomIndex] as typeof showSide.value
 
     // After transition completes, update all faces
     setTimeout(() => {
@@ -106,7 +106,7 @@ function animationOnHover() {
 
     const adjacent = adjacentSides[showSide.value]
     const randomIndex = Math.floor(Math.random() * adjacent.length)
-    showSide.value = adjacent[randomIndex]
+    showSide.value = adjacent[randomIndex] as typeof showSide.value
 
     setTimeout(() => {
       isTransitioning.value = false
