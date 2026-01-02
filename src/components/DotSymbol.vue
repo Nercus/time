@@ -20,8 +20,8 @@ const canvasRef = ref<HTMLCanvasElement | null>(null)
 const gridSize = getGridSize()
 const totalDots = gridSize * gridSize
 const canvasSize = ref(80)
-const dotGap = computed(() => 3)
-const dotSize = computed(() => (canvasSize.value - dotGap.value * (gridSize + 1)) / gridSize)
+const dotGap = 1
+const dotSize = computed(() => (canvasSize.value - dotGap * (gridSize + 1)) / gridSize)
 
 const drawStep = ref(totalDots)
 let animationFrame: number | null = null
@@ -41,18 +41,17 @@ function drawCanvas(step = totalDots) {
   let dotCount = 0
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {
-      const x = dotGap.value + col * (dotSize.value + dotGap.value)
-      const y = dotGap.value + row * (dotSize.value + dotGap.value)
+      const x = dotGap + col * (dotSize.value + dotGap)
+      const y = dotGap + row * (dotSize.value + dotGap)
       const isActive = pattern[row]?.[col] === 1 && dotCount < step
       ctx.beginPath()
       ctx.fillStyle = isActive ? 'black' : 'transparent'
       if (isActive) {
-        ctx.arc(
-          x + dotSize.value / 2,
-          y + dotSize.value / 2,
-          dotSize.value / 2,
-          0,
-          Math.PI * 2,
+        ctx.rect(
+          x,
+          y,
+          dotSize.value,
+          dotSize.value,
         )
       }
       if (isActive) ctx.fill()
@@ -62,7 +61,7 @@ function drawCanvas(step = totalDots) {
   }
 }
 
-const animatedSpeed = computed(() => props.hoverAnimation ? 0.25 : 1)
+const animatedSpeed = computed(() => props.hoverAnimation ? 0.5 : 1.5)
 
 function animateDrawStep() {
   if (drawStep.value < totalDots) {
