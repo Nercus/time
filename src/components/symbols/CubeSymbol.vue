@@ -1,6 +1,6 @@
 <template>
   <div class="size-8 md:size-10 lg:size-18 perspective-normal" @mouseenter="animationOnHover" @mouseleave="animationOnHover">
-    <div class="relative size-8 md:size-10 lg:size-18 transform-3d transition-all duration-500 ease-in-out" :style="cubeTransform">
+    <div class="relative size-8 md:size-10 lg:size-18 transform-3d transition-all duration-500 ease-in-out select-none" :style="cubeTransform">
       <div
         class="absolute flex justify-center items-center bg-zinc-100 border border-zinc-400 size-full font-mono font-bold text-lg md:text-2xl lg:text-4xl front"
         :class="getFaceColor('front')">
