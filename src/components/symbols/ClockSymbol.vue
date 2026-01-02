@@ -25,10 +25,10 @@ const rotations = {
   'bottom-left': { hour: 180, minute: 270 },
   'bottom-right': { hour: 180, minute: 90 },
   'default': { hour: 45, minute: 45 },
-  'diagonal-left': { hour: 315, minute: 135 },
-  'diagonal-right': { hour: 45, minute: 225 },
-  'caret-left': { hour: 135, minute: 45 },
-  'caret-right': { hour: 315, minute: 225 },
+  'arrow-left-t': { hour: 225, minute: 90 },
+  'arrow-left-b': { hour: 315, minute: 90 },
+  'arrow-right-t': { hour: 270, minute: 135 },
+  'arrow-right-b': { hour: 270, minute: 45 },
 } as const
 
 const symbols: Record<SymbolTypes, (keyof typeof rotations)[]> = {
@@ -292,8 +292,8 @@ const symbols: Record<SymbolTypes, (keyof typeof rotations)[]> = {
     'horizontal',
     'top-left',
   ],
-  arrowLeft: ['caret-left', 'horizontal', 'horizontal', 'horizontal'],
-  arrowRight: ['horizontal', 'horizontal', 'horizontal', 'caret-right'],
+  arrowLeft: ['arrow-left-t', 'horizontal', 'horizontal', 'horizontal', 'arrow-left-b', 'horizontal', 'horizontal', 'horizontal'],
+  arrowRight: ['horizontal', 'horizontal', 'horizontal', 'arrow-right-t', 'horizontal', 'horizontal', 'horizontal', 'arrow-right-b'],
   colon: [
     'default',
     'default',
