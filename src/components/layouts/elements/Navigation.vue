@@ -1,10 +1,10 @@
 <template>
   <div ref="swipeTarget" class="fixed inset-0 flex flex-col justify-end">
     <footer class="flex flex-row justify-between items-center p-10 w-full">
-      <button class="cursor-pointer" @click="goBack">
+      <button class="size-8 md:size-10 lg:size-18 cursor-pointer" @click="goBack">
         <slot name="back" />
       </button>
-      <button class="cursor-pointer" @click="goNext">
+      <button class="size-8 md:size-10 lg:size-18 cursor-pointer" @click="goNext">
         <slot name="next" />
       </button>
     </footer>
