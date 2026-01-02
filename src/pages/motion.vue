@@ -4,39 +4,39 @@
     <div class="flex-1 size-full noise-bg">
       <Time class="fixed inset-0 size-screen">
         <template #day>
-          <NoiseSymbol :symbol="time.day.value?.[0]" />
-          <NoiseSymbol :symbol="time.day.value?.[1]" />
+          <MotionSymbol :symbol="time.day.value?.[0]" />
+          <MotionSymbol :symbol="time.day.value?.[1]" />
         </template>
         <template #date-separator>
-          <NoiseSymbol symbol="." />
+          <MotionSymbol symbol="." />
         </template>
         <template #date-time-separator>
-          <NoiseSymbol symbol="-" />
+          <MotionSymbol symbol="-" />
         </template>
         <template #month>
-          <NoiseSymbol :symbol="time.month.value?.[0]" />
-          <NoiseSymbol :symbol="time.month.value?.[1]" />
+          <MotionSymbol :symbol="time.month.value?.[0]" />
+          <MotionSymbol :symbol="time.month.value?.[1]" />
         </template>
         <template #year>
-          <NoiseSymbol :symbol="time.year.value?.[0]" />
-          <NoiseSymbol :symbol="time.year.value?.[1]" />
-          <NoiseSymbol :symbol="time.year.value?.[2]" />
-          <NoiseSymbol :symbol="time.year.value?.[3]" />
+          <MotionSymbol :symbol="time.year.value?.[0]" />
+          <MotionSymbol :symbol="time.year.value?.[1]" />
+          <MotionSymbol :symbol="time.year.value?.[2]" />
+          <MotionSymbol :symbol="time.year.value?.[3]" />
         </template>
         <template #hour>
-          <NoiseSymbol :symbol="time.hour.value?.[0]" />
-          <NoiseSymbol :symbol="time.hour.value?.[1]" />
+          <MotionSymbol :symbol="time.hour.value?.[0]" />
+          <MotionSymbol :symbol="time.hour.value?.[1]" />
         </template>
         <template #time-separator>
-          <NoiseSymbol symbol=":" />
+          <MotionSymbol symbol=":" />
         </template>
         <template #minute>
-          <NoiseSymbol :symbol="time.minute.value?.[0]" />
-          <NoiseSymbol :symbol="time.minute.value?.[1]" />
+          <MotionSymbol :symbol="time.minute.value?.[0]" />
+          <MotionSymbol :symbol="time.minute.value?.[1]" />
         </template>
         <template #second>
-          <NoiseSymbol :symbol="time.second.value?.[0]" />
-          <NoiseSymbol :symbol="time.second.value?.[1]" />
+          <MotionSymbol :symbol="time.second.value?.[0]" />
+          <MotionSymbol :symbol="time.second.value?.[1]" />
         </template>
       </Time>
 
@@ -74,9 +74,9 @@ definePage({
 })
 
 useSeoMeta({
-  title: 'Noise Clock',
-  description: 'A noise style clock and date display built with Vue 3 and Tailwind CSS.',
-  ogUrl: 'https://time.wintersperger.dev/noise',
+  title: 'Motion Clock',
+  description: 'An animated clock and date display built with Vue 3, Tailwind CSS and Motion.',
+  ogUrl: 'https://time.wintersperger.dev/motion',
   ogSiteName: 'Nerc\'s clock',
   ogType: 'website',
   twitterCard: 'summary_large_image',

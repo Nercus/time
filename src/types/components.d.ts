@@ -11,17 +11,18 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    ClockSymbol: typeof import('./../components/ClockSymbol.vue')['default']
-    CubeSymbol: typeof import('./../components/CubeSymbol.vue')['default']
-    DotsSymbol: typeof import('./../components/DotsSymbol.vue')['default']
-    DrawnSymbol: typeof import('./../components/DrawnSymbol.vue')['default']
-    Icon: typeof import('./../components/Icon.vue')['default']
-    Navigation: typeof import('./../components/Navigation.vue')['default']
-    NoiseSymbol: typeof import('./../components/NoiseSymbol.vue')['default']
+    ClockSymbol: typeof import('./../components/symbols/ClockSymbol.vue')['default']
+    CubeSymbol: typeof import('./../components/symbols/CubeSymbol.vue')['default']
+    DotsSymbol: typeof import('./../components/symbols/DotsSymbol.vue')['default']
+    DrawnSymbol: typeof import('./../components/symbols/DrawnSymbol.vue')['default']
+    Icon: typeof import('./../components/shared/Icon.vue')['default']
+    MotionSymbol: typeof import('./../components/symbols/MotionSymbol.vue')['default']
+    Navigation: typeof import('./../components/layouts/elements/Navigation.vue')['default']
+    NoiseSymbol: typeof import('../components/symbols/MotionSymbol.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SquareSymbol: typeof import('./../components/SquareSymbol.vue')['default']
-    Time: typeof import('./../components/Time.vue')['default']
-    TimeSorted: typeof import('./../components/TimeSorted.vue')['default']
+    SquareSymbol: typeof import('./../components/symbols/SquareSymbol.vue')['default']
+    Time: typeof import('./../components/layouts/Time.vue')['default']
+    TimeSorted: typeof import('./../components/layouts/TimeSorted.vue')['default']
   }
 }

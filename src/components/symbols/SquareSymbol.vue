@@ -5,28 +5,28 @@
 </template>
 
 <script setup lang="ts">
-import type { SymbolTypes } from '../composables/useDots'
+import type { SymbolTypes } from '../../composables/useSquares'
 import { computed, onMounted, ref, watch } from 'vue'
-import { useDots } from '../composables/useDots'
+import { useSquares } from '../../composables/useSquares'
 
 const props = defineProps<{
   symbol: SymbolTypes | undefined
   hoverAnimation?: boolean
 }>()
 
-const { getGridSize, getPattern } = useDots()
+const { getGridSize, getPattern } = useSquares()
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const gridSize = getGridSize()
-const totalDots = gridSize * gridSize
+const totalSquares = gridSize * gridSize
 const canvasSize = ref(80)
-const dotGap = 1
-const dotSize = computed(() => (canvasSize.value - dotGap * (gridSize + 1)) / gridSize)
+const squareGap = 1
+const squareSize = computed(() => (canvasSize.value - squareGap * (gridSize + 1)) / gridSize)
 
-const drawStep = ref(totalDots)
+const drawStep = ref(totalSquares)
 let animationFrame: number | null = null
 
-function drawCanvas(step = totalDots) {
+function drawCanvas(step = totalSquares) {
   const canvas = canvasRef.value
   if (!canvas) return
   canvas.width = canvasSize.value
@@ -38,25 +38,25 @@ function drawCanvas(step = totalDots) {
   const pattern = getPattern(props.symbol)
   if (!pattern) return
 
-  let dotCount = 0
+  let squareCount = 0
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {
-      const x = dotGap + col * (dotSize.value + dotGap)
-      const y = dotGap + row * (dotSize.value + dotGap)
-      const isActive = pattern[row]?.[col] === 1 && dotCount < step
+      const x = squareGap + col * (squareSize.value + squareGap)
+      const y = squareGap + row * (squareSize.value + squareGap)
+      const isActive = pattern[row]?.[col] === 1 && squareCount < step
       ctx.beginPath()
       ctx.fillStyle = isActive ? 'black' : 'transparent'
       if (isActive) {
         ctx.rect(
           x,
           y,
-          dotSize.value,
-          dotSize.value,
+          squareSize.value,
+          squareSize.value,
         )
       }
       if (isActive) ctx.fill()
       ctx.closePath()
-      dotCount += pattern[row]?.[col] === 1 ? 1 : 0
+      squareCount += pattern[row]?.[col] === 1 ? 1 : 0
     }
   }
 }
@@ -64,13 +64,13 @@ function drawCanvas(step = totalDots) {
 const animatedSpeed = computed(() => props.hoverAnimation ? 0.5 : 1.5)
 
 function animateDrawStep() {
-  if (drawStep.value < totalDots) {
+  if (drawStep.value < totalSquares) {
     drawStep.value += animatedSpeed.value
     drawCanvas(drawStep.value)
     animationFrame = requestAnimationFrame(animateDrawStep)
   }
   else {
-    drawCanvas(totalDots)
+    drawCanvas(totalSquares)
     animationFrame = null
   }
 }
@@ -80,8 +80,8 @@ function startDrawing() {
   if (animationFrame) cancelAnimationFrame(animationFrame)
   drawStep.value = 0
   if (initialDraw.value) {
-    drawStep.value = totalDots
-    drawCanvas(totalDots)
+    drawStep.value = totalSquares
+    drawCanvas(totalSquares)
     initialDraw.value = false
     return
   }

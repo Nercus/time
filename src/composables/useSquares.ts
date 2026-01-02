@@ -166,7 +166,7 @@ const digitPatterns: { [key: string | number]: number[][] } = {
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
-  dot: [
+  square: [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -228,12 +228,12 @@ const digitPatterns: { [key: string | number]: number[][] } = {
   ],
 } as const
 
-export function useDots() {
-  function getPattern(dotSymbol: SymbolTypes): number[][] {
-    if (!(dotSymbol in digitPatterns)) {
-      throw new Error(`Invalid dot symbol: ${dotSymbol}`)
+export function useSquares() {
+  function getPattern(squareSymbol: SymbolTypes): number[][] {
+    if (!(squareSymbol in digitPatterns)) {
+      throw new Error(`Invalid square symbol: ${squareSymbol}`)
     }
-    return digitPatterns[dotSymbol]!
+    return digitPatterns[squareSymbol]!
   }
 
   function getGridSize(): number {

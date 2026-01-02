@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import type { SymbolTypes } from '../composables/useDots'
+import type { SymbolTypes } from '../../composables/useSquares'
 
 const props = defineProps<{
   symbol: string | number | undefined

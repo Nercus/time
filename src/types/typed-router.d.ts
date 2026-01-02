@@ -51,9 +51,9 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/noise': RouteRecordInfo<
-      '/noise',
-      '/noise',
+    '/motion': RouteRecordInfo<
+      '/motion',
+      '/motion',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -102,9 +102,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/noise.vue': {
+    'src/pages/motion.vue': {
       routes:
-        | '/noise'
+        | '/motion'
       views:
         | never
     }

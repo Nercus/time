@@ -11,22 +11,22 @@
 </template>
 
 <script setup lang="ts">
-import type { SymbolTypes } from '../composables/useDots'
-import Zero from '../assets/svgs/0.svg'
-import One from '../assets/svgs/1.svg'
-import Two from '../assets/svgs/2.svg'
-import Three from '../assets/svgs/3.svg'
-import Four from '../assets/svgs/4.svg'
-import Five from '../assets/svgs/5.svg'
-import Six from '../assets/svgs/6.svg'
-import Seven from '../assets/svgs/7.svg'
-import Eight from '../assets/svgs/8.svg'
-import Nine from '../assets/svgs/9.svg'
-import arrowLeft from '../assets/svgs/arrowLeft.svg'
-import arrowRight from '../assets/svgs/arrowRight.svg'
-import colon from '../assets/svgs/colon.svg'
-import dash from '../assets/svgs/dash.svg'
-import dot from '../assets/svgs/dot.svg'
+import type { SymbolTypes } from '../../composables/useSquares'
+import Zero from '../../assets/svgs/0.svg'
+import One from '../../assets/svgs/1.svg'
+import Two from '../../assets/svgs/2.svg'
+import Three from '../../assets/svgs/3.svg'
+import Four from '../../assets/svgs/4.svg'
+import Five from '../../assets/svgs/5.svg'
+import Six from '../../assets/svgs/6.svg'
+import Seven from '../../assets/svgs/7.svg'
+import Eight from '../../assets/svgs/8.svg'
+import Nine from '../../assets/svgs/9.svg'
+import arrowLeft from '../../assets/svgs/arrowLeft.svg'
+import arrowRight from '../../assets/svgs/arrowRight.svg'
+import colon from '../../assets/svgs/colon.svg'
+import dash from '../../assets/svgs/dash.svg'
+import dot from '../../assets/svgs/dot.svg'
 
 const props = defineProps<{
   symbol: string | number | undefined

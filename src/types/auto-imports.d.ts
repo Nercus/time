@@ -175,7 +175,7 @@ declare global {
   const useDevicesList: typeof import('@vueuse/core').useDevicesList
   const useDisplayMedia: typeof import('@vueuse/core').useDisplayMedia
   const useDocumentVisibility: typeof import('@vueuse/core').useDocumentVisibility
-  const useDots: typeof import('../composables/useDots').useDots
+  const useDots: typeof import('../composables/useSquares').useDots
   const useDraggable: typeof import('@vueuse/core').useDraggable
   const useDropZone: typeof import('@vueuse/core').useDropZone
   const useDynamicFavicon: typeof import('../composables/useDynamicFavicon').useDynamicFavicon
@@ -264,6 +264,7 @@ declare global {
   const useSorted: typeof import('@vueuse/core').useSorted
   const useSpeechRecognition: typeof import('@vueuse/core').useSpeechRecognition
   const useSpeechSynthesis: typeof import('@vueuse/core').useSpeechSynthesis
+  const useSquares: typeof import('../composables/useSquares').useSquares
   const useStepper: typeof import('@vueuse/core').useStepper
   const useStorage: typeof import('@vueuse/core').useStorage
   const useStorageAsync: typeof import('@vueuse/core').useStorageAsync
@@ -327,6 +328,6 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, ShallowRef, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
-  export type { SymbolTypes } from '../composables/useDots'
-  import('../composables/useDots')
+  export type { SymbolTypes } from '../composables/useSquares'
+  import('../composables/useSquares')
 }
