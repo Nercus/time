@@ -27,6 +27,8 @@ const rotations = {
   'default': { hour: 45, minute: 45 },
   'diagonal-left': { hour: 315, minute: 135 },
   'diagonal-right': { hour: 45, minute: 225 },
+  'caret-left': { hour: 135, minute: 45 },
+  'caret-right': { hour: 315, minute: 225 },
 } as const
 
 const symbols: Record<SymbolTypes, (keyof typeof rotations)[]> = {
@@ -290,8 +292,8 @@ const symbols: Record<SymbolTypes, (keyof typeof rotations)[]> = {
     'horizontal',
     'top-left',
   ],
-  arrowLeft: ['diagonal-right', 'horizontal', 'horizontal', 'horizontal', 'diagonal-left', 'horizontal', 'horizontal', 'horizontal'],
-  arrowRight: ['horizontal', 'horizontal', 'horizontal', 'diagonal-left', 'horizontal', 'horizontal', 'horizontal', 'diagonal-right'],
+  arrowLeft: ['caret-left', 'horizontal', 'horizontal', 'horizontal'],
+  arrowRight: ['horizontal', 'horizontal', 'horizontal', 'caret-right'],
   colon: [
     'default',
     'default',
@@ -384,28 +386,21 @@ const clockRotations = computed(() => {
 })
 
 const isHovering = ref(false)
-const randomRotations = ref<{ hour: number, minute: number }[]>([])
+const hoveredRotation = ref<{ hour: number, minute: number }[]>([])
 let hoverTimeout: number | null = null
 
 const displayedRotations = computed(() => {
-  if (props.hoverAnimation && isHovering.value && randomRotations.value.length > 0) {
-    return randomRotations.value
+  if (props.hoverAnimation && isHovering.value && hoveredRotation.value.length > 0) {
+    return hoveredRotation.value
   }
   return clockRotations.value
 })
 
-function generateRandomRotations() {
-  const rotationKeys = Object.keys(rotations) as (keyof typeof rotations)[]
-  return clockRotations.value.map(() => {
-    const randomKey = rotationKeys[Math.floor(Math.random() * rotationKeys.length)]
-    if (!randomKey) {
-      return { hour: 0, minute: 0 }
-    }
-    return {
-      hour: rotations[randomKey].hour,
-      minute: rotations[randomKey].minute,
-    }
-  })
+function swapRotations() {
+  return clockRotations.value.map(clock => ({
+    hour: clock.minute,
+    minute: clock.hour,
+  }))
 }
 
 const animationDuration = 500
@@ -414,10 +409,10 @@ function startHoverAnimation() {
   if (!props.hoverAnimation) return
 
   isHovering.value = true
-  randomRotations.value = generateRandomRotations()
+  hoveredRotation.value = swapRotations()
 
   hoverTimeout = window.setTimeout(() => {
-    randomRotations.value = []
+    hoveredRotation.value = []
   }, animationDuration)
 }
 
@@ -425,7 +420,7 @@ function stopHoverAnimation() {
   if (!props.hoverAnimation) return
 
   isHovering.value = false
-  randomRotations.value = []
+  hoveredRotation.value = []
 
   if (hoverTimeout) {
     clearTimeout(hoverTimeout)
