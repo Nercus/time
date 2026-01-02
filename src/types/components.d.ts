@@ -14,7 +14,6 @@ declare module 'vue' {
     ClockSymbol: typeof import('./../components/ClockSymbol.vue')['default']
     CubeSymbol: typeof import('./../components/CubeSymbol.vue')['default']
     DotsSymbol: typeof import('./../components/DotsSymbol.vue')['default']
-    DotSymbol: typeof import('../components/DotsSymbol.vue')['default']
     DrawnSymbol: typeof import('./../components/DrawnSymbol.vue')['default']
     Icon: typeof import('./../components/Icon.vue')['default']
     Navigation: typeof import('./../components/Navigation.vue')['default']
@@ -23,7 +22,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SquareSymbol: typeof import('./../components/SquareSymbol.vue')['default']
     Time: typeof import('./../components/Time.vue')['default']
-    'Time.1': typeof import('../components/TimeSorted.vue')['default']
     TimeSorted: typeof import('./../components/TimeSorted.vue')['default']
   }
 }
