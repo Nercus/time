@@ -67,8 +67,4 @@ useSeoMeta({
 })
 
 const time = useTime()
-
-useHead({
-  title: () => time.currentDate.value.toLocaleString(),
-})
 </script>
