@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-row justify-center items-center gap-2 w-full">
+  <main class="flex flex-row justify-center items-center gap-4 md:gap-10 w-full">
     <slot v-if="breakpoints['2xl'].value" name="year" />
     <slot v-if="breakpoints['2xl'].value" name="separator" />
     <slot v-if="breakpoints['2xl'].value" name="month" />

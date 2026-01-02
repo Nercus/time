@@ -21,7 +21,7 @@
           <DotsSymbol :num="time.currentDate.value.getSeconds()" :max="60" color="rose-100" label="Second" />
         </template>
         <template #separator>
-          <div class="bg-linear-to-b from-transparent via-gray-200 to-transparent mx-20 w-px h-96" />
+          <div class="bg-linear-to-b from-transparent via-gray-200 to-transparent w-px h-60 md:h-96" />
         </template>
       </TimeSorted>
       <Navigation class="bottom-4 fixed inset-x-0">
