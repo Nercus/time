@@ -44,16 +44,16 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/dot': RouteRecordInfo<
-      '/dot',
-      '/dot',
+    '/noise': RouteRecordInfo<
+      '/noise',
+      '/noise',
       Record<never, never>,
       Record<never, never>,
       | never
     >,
-    '/noise': RouteRecordInfo<
-      '/noise',
-      '/noise',
+    '/square': RouteRecordInfo<
+      '/square',
+      '/square',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -89,15 +89,15 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/dot.vue': {
-      routes:
-        | '/dot'
-      views:
-        | never
-    }
     'src/pages/noise.vue': {
       routes:
         | '/noise'
+      views:
+        | never
+    }
+    'src/pages/square.vue': {
+      routes:
+        | '/square'
       views:
         | never
     }

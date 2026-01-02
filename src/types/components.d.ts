@@ -13,13 +13,14 @@ declare module 'vue' {
   export interface GlobalComponents {
     ClockSymbol: typeof import('./../components/ClockSymbol.vue')['default']
     CubeSymbol: typeof import('./../components/CubeSymbol.vue')['default']
-    DotSymbol: typeof import('./../components/DotSymbol.vue')['default']
+    DotSymbol: typeof import('../components/SquareSymbol.vue')['default']
     DrawnSymbol: typeof import('./../components/DrawnSymbol.vue')['default']
     Icon: typeof import('./../components/Icon.vue')['default']
     Navigation: typeof import('./../components/Navigation.vue')['default']
     NoiseSymbol: typeof import('./../components/NoiseSymbol.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SquareSymbol: typeof import('./../components/SquareSymbol.vue')['default']
     Time: typeof import('./../components/Time.vue')['default']
   }
 }
