@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-4" @mouseenter="startHoverAnimation" @mouseleave="stopHoverAnimation">
-    <div v-for="(clock, index) in displayedRotations" :key="index" class="relative bg-stone-100 shadow-inner rounded-full size-5">
+  <div class="gap-0.5 grid grid-cols-4" @mouseenter="startHoverAnimation" @mouseleave="stopHoverAnimation">
+    <div v-for="(clock, index) in displayedRotations" :key="index" class="relative shadow-inner-xl rounded-full size-2.5 sm:size-3 md:size-4 lg:size-5">
       <div
-        class="top-1/2 left-1/2 absolute bg-blue-900 rounded-full w-0.5 h-2.5 origin-bottom transition-transform duration-500 ease-in-out transform" :style="`transform: translate(-50%, -100%) rotate(${clock.hour}deg)`" />
+        class="top-1/2 left-1/2 absolute bg-blue-900 rounded-full w-px md:w-0.5 h-2.5 origin-bottom transition-transform duration-500 ease-in-out transform" :style="`transform: translate(-50%, -100%) rotate(${clock.hour}deg)`" />
       <div
-        class="top-1/2 left-1/2 absolute bg-blue-900 rounded-full w-0.5 h-2.5 origin-bottom transition-transform duration-500 ease-in-out transform" :style="`transform: translate(-50%, -100%) rotate(${(clock.minute)}deg)`" />
+        class="top-1/2 left-1/2 absolute bg-blue-900 rounded-full w-px md:w-0.5 h-2.5 origin-bottom transition-transform duration-500 ease-in-out transform" :style="`transform: translate(-50%, -100%) rotate(${(clock.minute)}deg)`" />
     </div>
   </div>
 </template>
