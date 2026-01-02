@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/component-name-in-template-casing -->
 <template>
   <div v-if="!isArrow" class="flex flex-col items-center gap-2 pt-4">
-    <span class="text-gray-900 text-sm italic tracking-wide"> {{ props.label }}</span>
+    <span class="font-mono text-gray-900 text-sm tracking-wide"> {{ props.label }}</span>
     <div class="gap-2 md:gap-4 grid max-w-30" :class="columns">
       <Motion v-for="i in props.max" :key="i" :animate="props.num >= i ? { scale: 1 } : { scale: 0.3 }" :initial="{ scale: 0.3 }" :transition="{ type: 'spring', duration: 0.5, bounce: 0.3 }" class="flex justify-center items-center rounded-full size-2 md:size-3 font-mono text-lg select-none will-change-transform" :class="props.num >= i ? color : 'bg-gray-400'" />
     </div>
