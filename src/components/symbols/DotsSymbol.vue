@@ -6,11 +6,11 @@
       <Motion v-for="i in props.max" :key="i" :animate="props.num >= i ? { scale: 1 } : { scale: 0.3 }" :initial="{ scale: 0.3 }" :transition="{ type: 'spring', duration: 0.5, bounce: 0.3 }" class="flex justify-center items-center rounded-full size-2 md:size-3 font-mono text-lg select-none will-change-transform" :class="props.num >= i ? color : 'bg-gray-400'" />
     </div>
   </div>
-  <div v-else class="gap-1 grid grid-cols-6" @mouseenter="isHovering = true" @mouseleave="isHovering = false">
+  <div v-else class="gap-1 grid grid-cols-5" @mouseenter="isHovering = true" @mouseleave="isHovering = false">
     <motion.div
-      v-for="i in 18" :key="i"
+      v-for="i in 15" :key="i"
       class="flex justify-center items-center bg-blue-900 rounded-full size-2 font-mono text-lg select-none will-change-transform"
-      :animate="Math.floor((i - 1) / 6) % 2 === 1 && isHovering ? { translateX: props.arrow === 'right' ? 8 : -8 } : { translateX: 0 }" />
+      :animate="Math.floor((i - 1) / 5) % 2 === 1 && isHovering ? { translateX: props.arrow === 'right' ? 8 : -8 } : { translateX: 0 }" />
   </div>
 </template>
 
