@@ -1,10 +1,22 @@
 export function useDynamicFavicon() {
-  const canvas = document.createElement('canvas')
-  const ctx = canvas.getContext('2d')!
-  canvas.width = 32
-  canvas.height = 32
+  let canvas: HTMLCanvasElement | null = null
+  let ctx: CanvasRenderingContext2D | null = null
+
+  function initCanvas() {
+    if (typeof document === 'undefined') return false
+    if (canvas && ctx) return true
+
+    canvas = document.createElement('canvas')
+    ctx = canvas.getContext('2d')!
+    canvas.width = 32
+    canvas.height = 32
+    return true
+  }
 
   function updateFavicon(date: Date) {
+    if (!initCanvas()) return
+    if (!canvas || !ctx) return
+
     const head = document.getElementsByTagName('head')[0]
     if (!head) return
     ctx.clearRect(0, 0, 32, 32)
