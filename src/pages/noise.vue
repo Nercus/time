@@ -75,7 +75,7 @@ definePage({
 
 useHead({
   meta: [
-    { name: 'theme-color', content: 'white' },
+    { name: 'theme-color', content: '#FFFFFF' },
   ],
 })
 
