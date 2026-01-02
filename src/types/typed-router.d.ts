@@ -44,6 +44,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/dots': RouteRecordInfo<
+      '/dots',
+      '/dots',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/noise': RouteRecordInfo<
       '/noise',
       '/noise',
@@ -86,6 +93,12 @@ declare module 'vue-router/auto-routes' {
     'src/pages/cube.vue': {
       routes:
         | '/cube'
+      views:
+        | never
+    }
+    'src/pages/dots.vue': {
+      routes:
+        | '/dots'
       views:
         | never
     }
