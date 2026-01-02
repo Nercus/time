@@ -1,35 +1,35 @@
 <template>
-  <div class="relative flex flex-1 justify-center items-center bg-black size-full">
+  <div class="relative flex flex-1 justify-center items-center bg-white size-full">
     <div class="flex-1 size-full">
       <TimeSorted class="fixed inset-0 size-screen">
         <template #year>
-          <DotsSymbol :num="yearInMillennia" :max="yearInMillennia" color="rose-600" label="Year" />
+          <DotsSymbol :num="yearInMillennia" :max="yearInMillennia" color="blue-900" label="Year" />
         </template>
         <template #month>
-          <DotsSymbol :num="time.currentDate.value.getMonth() + 1" :max="12" color="rose-500" label="Month" />
+          <DotsSymbol :num="time.currentDate.value.getMonth() + 1" :max="12" color="blue-800" label="Month" />
         </template>
         <template #day>
-          <DotsSymbol :num="time.currentDate.value.getDate()" :max="daysInMonth" color="rose-400" label="Day" />
+          <DotsSymbol :num="time.currentDate.value.getDate()" :max="daysInMonth" color="blue-700" label="Day" />
         </template>
         <template #hour>
-          <DotsSymbol :num="time.currentDate.value.getHours()" :max="24" color="rose-300" label="Hour" />
+          <DotsSymbol :num="time.currentDate.value.getHours()" :max="24" color="blue-600" label="Hour" />
         </template>
         <template #minute>
-          <DotsSymbol :num="time.currentDate.value.getMinutes()" :max="60" color="rose-200" label="Minute" />
+          <DotsSymbol :num="time.currentDate.value.getMinutes()" :max="60" color="blue-500" label="Minute" />
         </template>
         <template #second>
-          <DotsSymbol :num="time.currentDate.value.getSeconds()" :max="60" color="rose-100" label="Second" />
+          <DotsSymbol :num="time.currentDate.value.getSeconds()" :max="60" color="blue-400" label="Second" />
         </template>
         <template #separator>
-          <div class="bg-linear-to-b from-transparent via-gray-200 to-transparent w-px h-60 md:h-96" />
+          <div class="bg-linear-to-b from-transparent via-gray-900 to-transparent w-px h-60 md:h-96" />
         </template>
       </TimeSorted>
       <Navigation class="bottom-4 fixed inset-x-0">
         <template #back>
-          <DotsSymbol :num="0" :max="0" color="rose-100" arrow="left" />
+          <DotsSymbol :num="0" :max="0" color="blue-900" arrow="left" />
         </template>
         <template #next>
-          <DotsSymbol :num="0" :max="0" color="rose-100" arrow="right" />
+          <DotsSymbol :num="0" :max="0" color="blue-900" arrow="right" />
         </template>
       </Navigation>
     </div>
