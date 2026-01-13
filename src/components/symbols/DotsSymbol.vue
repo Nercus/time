@@ -2,7 +2,7 @@
 <template>
   <div v-if="!isArrow" class="flex flex-col items-center gap-2 pt-4">
     <span class="font-mono text-gray-900 text-sm tracking-wide"> {{ props.label }}</span>
-    <div class="gap-2 md:gap-4 grid max-w-30" :class="columns">
+    <div class="gap-2 landscape:max-lg:gap-2 md:gap-4 grid max-w-30" :class="columns">
       <Motion v-for="i in props.max" :key="i" :animate="props.num >= i ? { scale: 1 } : { scale: 0.3 }" :initial="{ scale: 0.3 }" :transition="{ type: 'spring', duration: 0.5, bounce: 0.3 }" class="flex justify-center items-center rounded-full size-2 md:size-3 font-mono text-lg select-none will-change-transform" :class="props.num >= i ? color : 'bg-gray-400'" />
     </div>
   </div>
@@ -48,10 +48,10 @@ const color = computed(() => {
 })
 
 const columns = computed(() => {
-  if (props.max <= 10) return 'grid-cols-1'
-  if (props.max <= 20) return 'grid-cols-2'
-  if (props.max <= 30) return 'grid-cols-3'
-  if (props.max <= 40) return 'grid-cols-4'
-  return 'grid-cols-5'
+  if (props.max <= 10) return 'grid-cols-1 landscape:max-lg:grid-cols-2'
+  if (props.max <= 20) return 'grid-cols-2 landscape:max-lg:grid-cols-3'
+  if (props.max <= 30) return 'grid-cols-3 landscape:max-lg:grid-cols-4'
+  if (props.max <= 40) return 'grid-cols-4 landscape:max-lg:grid-cols-6'
+  return 'grid-cols-5 landscape:max-lg:grid-cols-8'
 })
 </script>
