@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ButtonSymbol: typeof import('./../components/symbols/ButtonSymbol.vue')['default']
     ClockSymbol: typeof import('./../components/symbols/ClockSymbol.vue')['default']
     CubeSymbol: typeof import('./../components/symbols/CubeSymbol.vue')['default']
     DotsSymbol: typeof import('./../components/symbols/DotsSymbol.vue')['default']

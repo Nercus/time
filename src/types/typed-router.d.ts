@@ -30,6 +30,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/button': RouteRecordInfo<
+      '/button',
+      '/button',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/clock': RouteRecordInfo<
       '/clock',
       '/clock',
@@ -81,6 +88,12 @@ declare module 'vue-router/auto-routes' {
     'src/pages/index.vue': {
       routes:
         | '/'
+      views:
+        | never
+    }
+    'src/pages/button.vue': {
+      routes:
+        | '/button'
       views:
         | never
     }
